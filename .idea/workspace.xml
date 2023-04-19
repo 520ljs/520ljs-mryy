@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c80113-a564-49e7-9bcd-ef926e38cb75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mryy/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/MryyApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/test/java/com/ss/mryy/MryyApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,24 +38,34 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/1000phone/SourceCode/ljsmr/520ljs-mryy",
+    "last_opened_file_path": "D:/1000phone/SourceCode/ljsmr/qf-spring-boot",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.25862068",
+    "settings.editor.selected.configurable": "File.Encoding",
     "spring.configuration.checksum": "404a4c41bf32a804168602f3dd313001",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -82,7 +89,8 @@
       <option name="presentableId" value="Default" />
       <updated>1681898730379</updated>
       <workItem from="1681898731650" duration="3409000" />
-      <workItem from="1681907829449" duration="316000" />
+      <workItem from="1681907829449" duration="2463000" />
+      <workItem from="1681910303946" duration="678000" />
     </task>
     <servers />
   </component>
