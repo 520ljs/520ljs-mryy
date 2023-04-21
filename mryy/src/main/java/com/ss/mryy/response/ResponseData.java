@@ -12,33 +12,33 @@ public class ResponseData {
 
     private String code;
 
-    private String info;
+    private String msg;
 
     private Object data;
 
     public ResponseData() {
     }
 
-    public ResponseData(String code, String info, Object data) {
-        this.code = code;
-        this.info = info;
-        this.data = data;
-    }
-
     public ResponseData(ResponseCode responseCode, Object data) {
         this.code = responseCode.getCode();
-        this.info = responseCode.getInfo();
+        this.msg = responseCode.getMsg();
         this.data = data;
     }
 
     public ResponseData(ResponseCode responseCode) {
         this.code = responseCode.getCode();
-        this.info = responseCode.getInfo();
+        this.msg = responseCode.getMsg();
     }
 
-    public ResponseData(String code, String info) {
+    public ResponseData(String code, String massage, Object data) {
         this.code = code;
-        this.info = info;
+        this.msg = massage;
+        this.data = data;
+    }
+
+    public ResponseData(String code, String massage) {
+        this.code = code;
+        this.msg = massage;
     }
 
     public String getCode() {
@@ -49,12 +49,12 @@ public class ResponseData {
         this.code = code;
     }
 
-    public String getInfo() {
-        return info;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setInfo(String info) {
-        this.info = info;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 
     public Object getData() {

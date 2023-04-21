@@ -53,4 +53,10 @@ public interface ProjectService {
      */
     boolean deleteById(Long id);
 
+    /**
+     * 获取所有的项目信息
+     * @return
+     */
+    //ResponseData getProinfos(int page, int limit);
+
 }

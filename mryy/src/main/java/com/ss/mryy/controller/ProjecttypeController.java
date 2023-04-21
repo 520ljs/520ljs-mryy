@@ -1,7 +1,9 @@
 package com.ss.mryy.controller;
 
 import com.ss.mryy.entity.Projecttype;
+import com.ss.mryy.service.ProjectService;
 import com.ss.mryy.service.ProjecttypeService;
+import io.swagger.annotations.Api;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,7 @@ import javax.annotation.Resource;
  * @author makejava
  * @since 2023-04-19 22:27:51
  */
+@Api(tags = "项目接口")
 @RestController
 @RequestMapping("projecttype")
 public class ProjecttypeController {
@@ -23,6 +26,9 @@ public class ProjecttypeController {
      */
     @Resource
     private ProjecttypeService projecttypeService;
+
+    @Resource
+    private ProjectService projectService;
 
     /**
      * 分页查询
@@ -79,6 +85,14 @@ public class ProjecttypeController {
     public ResponseEntity<Boolean> deleteById(Long id) {
         return ResponseEntity.ok(this.projecttypeService.deleteById(id));
     }
+
+//    @ApiOperation(value = "获取项目信息",notes = "获取所有的项目信息")
+//    @GetMapping("getProinfos")
+//    public ResponseData getProinfos(int page,int limit){
+//        System.out.println("page = "+page);
+//        System.out.println("limit = "+limit);
+//        return projectService.getProinfos(page,limit);
+//    }
 
 }
 

@@ -15,16 +15,17 @@ public enum ResponseCode {
     FAIL("500", "未知错误"),
 
     FAIL_DAO("501", "数据库断开连接");
+
     private String code;
 
-    private String info;
+    private String msg;
 
     ResponseCode() {
     }
 
-    ResponseCode(String code, String info) {
+    ResponseCode(String code, String msg) {
         this.code = code;
-        this.info = info;
+        this.msg = msg;
     }
 
     public String getCode() {
@@ -35,11 +36,11 @@ public enum ResponseCode {
         this.code = code;
     }
 
-    public String getInfo() {
-        return info;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setInfo(String info) {
-        this.info = info;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 }

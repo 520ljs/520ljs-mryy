@@ -1,7 +1,6 @@
 package com.ss.mryy.controller;
 
 import com.ss.mryy.entity.Image;
-import com.ss.mryy.response.ResponseCode;
 import com.ss.mryy.response.ResponseData;
 import com.ss.mryy.service.ImageService;
 import io.swagger.annotations.Api;
@@ -89,7 +88,7 @@ public class ImageController {
     @GetMapping("queryImageByType")
     public ResponseData queryImageByType(String imagetype) {
         // 调用业务层
-        return new ResponseData(ResponseCode.SUCCESS, imageService.queryImageByType(imagetype));
+        return imageService.queryImageByType(imagetype);
     }
 
 }
