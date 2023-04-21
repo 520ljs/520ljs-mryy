@@ -1,12 +1,14 @@
 package com.ss.mryy.service.impl;
 
-import com.ss.mryy.entity.Image;
 import com.ss.mryy.dao.ImageDao;
+import com.ss.mryy.entity.Image;
+import com.ss.mryy.response.ResponseCode;
+import com.ss.mryy.response.ResponseData;
 import com.ss.mryy.service.ImageService;
-import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -82,9 +84,16 @@ public class ImageServiceImpl implements ImageService {
     }
 
     @Override
-    public List<Image> queryImageByType(String imagetype) {
+    public ResponseData queryImageByType(String imagetype) {
 
         // 调用dao层
-        return imageDao.queryImageByType(imagetype);
+        try {
+            // 成功
+            List<Image> images = imageDao.queryImageByType(imagetype);
+            return new ResponseData(ResponseCode.SUCCESS, images);
+        } catch (Exception e) {
+            // 失败
+            return new ResponseData(ResponseCode.FAIL_DAO);
+        }
     }
 }

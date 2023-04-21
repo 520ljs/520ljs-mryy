@@ -1,10 +1,9 @@
 package com.ss.mryy.service;
 
 import com.ss.mryy.entity.Image;
+import com.ss.mryy.response.ResponseData;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-
-import java.util.List;
 
 /**
  * (Image)表服务接口
@@ -61,6 +60,6 @@ public interface ImageService {
      * @param imagetype 图片类型
      * @return 查询到的图片
      */
-    List<Image> queryImageByType(String imagetype);
+    ResponseData queryImageByType(String imagetype);
 
 }

@@ -5,83 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c80113-a564-49e7-9bcd-ef926e38cb75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/config/StaticConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/b1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/banner_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/banner_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/banner_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/banner_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/j9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/nav_icon_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/nav_icon_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/nav_icon_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/nav_icon_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/nav_icon_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p.20.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p41.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p42.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p43.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p44.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p45.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p46.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p47.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p49.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p51.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p52.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p53.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p54.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p55.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/webapp/img/p9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/config/Swagger2Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/response/ResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/response/ResponseData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/dao/ImageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/dao/ImageDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/ImageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/ImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/ImageServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mryy/src/main/resources/mapper/ImageDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/resources/mapper/ImageDao.xml" afterDir="false" />
@@ -138,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/1000phone/SourceCode/ljsmr/520ljs-mryy/mryy/src/main/webapp",
+    "last_opened_file_path": "D:/1000phone/SourceCode/ljsmr/520ljs-mryy/mryy/src/main/java/com/ss/mryy/response",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -158,11 +84,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\1000phone\SourceCode\ljsmr\520ljs-mryy\mryy\src\main\java\com\ss\mryy\response" />
       <recent name="D:\1000phone\SourceCode\ljsmr\520ljs-mryy\mryy\src\main\webapp" />
       <recent name="D:\1000phone\SourceCode\ljsmr\520ljs-mryy\mryy\src\main\resources\static\img" />
       <recent name="D:\1000phone\SourceCode\ljsmr\520ljs-mryy\mryy\src\main\webapp\img" />
       <recent name="D:\1000phone\SourceCode\ljsmr\520ljs-mryy\mryy\src\main\webapp\image" />
-      <recent name="D:\1000phone\SourceCode\ljsmr\520ljs-mryy\mryy\target" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\1000phone\SourceCode\ljsmr\520ljs-mryy\mryy\src\main\webapp" />
@@ -196,7 +122,7 @@
       <workItem from="1681913008491" duration="4059000" />
       <workItem from="1681953620538" duration="17692000" />
       <workItem from="1682015652923" duration="681000" />
-      <workItem from="1682038958189" duration="7884000" />
+      <workItem from="1682038958189" duration="14049000" />
     </task>
     <servers />
   </component>

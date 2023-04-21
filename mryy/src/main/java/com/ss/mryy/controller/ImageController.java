@@ -1,15 +1,17 @@
 package com.ss.mryy.controller;
 
 import com.ss.mryy.entity.Image;
+import com.ss.mryy.response.ResponseCode;
+import com.ss.mryy.response.ResponseData;
 import com.ss.mryy.service.ImageService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * (Image)表控制层
@@ -83,10 +85,11 @@ public class ImageController {
         return ResponseEntity.ok(this.imageService.deleteById(id));
     }
 
+    @ApiOperation(value = "获取图片信息", notes = "根据图片类型查询图片信息,banner：首页轮播图 nav：菜单 head：头像")
     @GetMapping("queryImageByType")
-    public List<Image> queryImageByType(String imagetype) {
+    public ResponseData queryImageByType(String imagetype) {
         // 调用业务层
-        return imageService.queryImageByType(imagetype);
+        return new ResponseData(ResponseCode.SUCCESS, imageService.queryImageByType(imagetype));
     }
 
 }
