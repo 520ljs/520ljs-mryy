@@ -80,5 +80,7 @@ public interface ImageDao {
      */
     int deleteById(Long id);
 
+
+    List<Image> queryImageByType(String imagetype);
 }
 

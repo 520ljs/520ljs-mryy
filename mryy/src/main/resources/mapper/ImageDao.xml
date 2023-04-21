@@ -10,22 +10,23 @@
         <result property="imagestate" column="imagestate" jdbcType="VARCHAR"/>
     </resultMap>
 
+    <select id="queryImageByType" resultType="com.ss.mryy.entity.Image">
+        SELECT * FROM img WHERE imagestate = 1 AND imagetype = #{imagetype}
+    </select>
+
     <!--查询单个-->
     <select id="queryById" resultMap="ImageMap">
-        select id,
-               imageurl,
-               imagetitle,
-               imagetype,
-               imagestate
-        from image
+        select
+          id, imageurl, imagetitle, imagetype, imagestate
+        from img
         where id = #{id}
     </select>
 
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="ImageMap">
         select
-        id, imageurl, imagetitle, imagetype, imagestate
-        from image
+          id, imageurl, imagetitle, imagetype, imagestate
+        from img
         <where>
             <if test="id != null">
                 and id = #{id}
@@ -49,7 +50,7 @@
     <!--统计总行数-->
     <select id="count" resultType="java.lang.Long">
         select count(1)
-        from image
+        from img
         <where>
             <if test="id != null">
                 and id = #{id}
@@ -71,20 +72,20 @@
 
     <!--新增所有列-->
     <insert id="insert" keyProperty="id" useGeneratedKeys="true">
-        insert into image(imageurl, imagetitle, imagetype, imagestate)
+        insert into img(imageurl, imagetitle, imagetype, imagestate)
         values (#{imageurl}, #{imagetitle}, #{imagetype}, #{imagestate})
     </insert>
 
     <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
-        insert into image(imageurl, imagetitle, imagetype, imagestate)
+        insert into img(imageurl, imagetitle, imagetype, imagestate)
         values
         <foreach collection="entities" item="entity" separator=",">
-            (#{entity.imageurl}, #{entity.imagetitle}, #{entity.imagetype}, #{entity.imagestate})
+        (#{entity.imageurl}, #{entity.imagetitle}, #{entity.imagetype}, #{entity.imagestate})
         </foreach>
     </insert>
 
     <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
-        insert into image(imageurl, imagetitle, imagetype, imagestate)
+        insert into img(imageurl, imagetitle, imagetype, imagestate)
         values
         <foreach collection="entities" item="entity" separator=",">
             (#{entity.imageurl}, #{entity.imagetitle}, #{entity.imagetype}, #{entity.imagestate})
@@ -98,7 +99,7 @@
 
     <!--通过主键修改数据-->
     <update id="update">
-        update image
+        update img
         <set>
             <if test="imageurl != null and imageurl != ''">
                 imageurl = #{imageurl},
@@ -118,9 +119,7 @@
 
     <!--通过主键删除-->
     <delete id="deleteById">
-        delete
-        from image
-        where id = #{id}
+        delete from img where id = #{id}
     </delete>
 
 </mapper>

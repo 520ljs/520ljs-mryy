@@ -107,7 +107,7 @@
               <option name="saveModelName" value="mryy" />
               <option name="savePackageName" value="com.ss.mryy" />
               <option name="savePath" value="./mryy/src/main/java/com/ss/mryy" />
-              <option name="templateGroupName" value="" />
+              <option name="templateGroupName" value="Default" />
             </TableInfoDTO>
           </value>
         </entry>

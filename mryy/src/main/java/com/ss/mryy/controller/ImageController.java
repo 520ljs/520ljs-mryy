@@ -2,12 +2,14 @@ package com.ss.mryy.controller;
 
 import com.ss.mryy.entity.Image;
 import com.ss.mryy.service.ImageService;
+import io.swagger.annotations.Api;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Image)表控制层
@@ -15,6 +17,7 @@ import javax.annotation.Resource;
  * @author makejava
  * @since 2023-04-20 01:52:41
  */
+@Api(tags = "图片接口")
 @RestController
 @RequestMapping("image")
 public class ImageController {
@@ -78,6 +81,12 @@ public class ImageController {
     @DeleteMapping
     public ResponseEntity<Boolean> deleteById(Long id) {
         return ResponseEntity.ok(this.imageService.deleteById(id));
+    }
+
+    @GetMapping("queryImageByType")
+    public List<Image> queryImageByType(String imagetype) {
+        // 调用业务层
+        return imageService.queryImageByType(imagetype);
     }
 
 }
