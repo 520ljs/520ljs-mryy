@@ -34,7 +34,7 @@ public class ProjecttypeController {
      * 分页查询
      *
      * @param projecttype 筛选条件
-     * @param pageRequest      分页对象
+     * @param pageRequest 分页对象
      * @return 查询结果
      */
     @GetMapping
@@ -86,13 +86,6 @@ public class ProjecttypeController {
         return ResponseEntity.ok(this.projecttypeService.deleteById(id));
     }
 
-//    @ApiOperation(value = "获取项目信息",notes = "获取所有的项目信息")
-//    @GetMapping("getProinfos")
-//    public ResponseData getProinfos(int page,int limit){
-//        System.out.println("page = "+page);
-//        System.out.println("limit = "+limit);
-//        return projectService.getProinfos(page,limit);
-//    }
 
 }
 

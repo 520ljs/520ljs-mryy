@@ -1,7 +1,10 @@
 package com.ss.mryy.controller;
 
 import com.ss.mryy.entity.Project;
+import com.ss.mryy.response.ResponseData;
 import com.ss.mryy.service.ProjectService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +18,7 @@ import javax.annotation.Resource;
  * @author makejava
  * @since 2023-04-20 01:52:42
  */
+@Api(tags = "项目接口")
 @RestController
 @RequestMapping("project")
 public class ProjectController {
@@ -78,6 +82,13 @@ public class ProjectController {
     @DeleteMapping
     public ResponseEntity<Boolean> deleteById(Long id) {
         return ResponseEntity.ok(this.projectService.deleteById(id));
+    }
+
+    @ApiOperation(value = "获取项目信息", notes = "获取所有的项目信息")
+    @GetMapping("getProInfos")
+    public ResponseData getProInfos() {
+
+        return projectService.getProInfos();
     }
 
 }

@@ -80,5 +80,18 @@ public interface ProjectDao {
      */
     int deleteById(Long id);
 
+    /**
+     * 通过实体类作为筛选条件查询
+     *
+     * @param project 实例对象
+     * @return 对象列表
+     */
+    List<Project> queryAll(Project project);
+
+    /**
+     * 获取项目信息
+     * @return
+     */
+    List<Project> getProInfos();
 }
 

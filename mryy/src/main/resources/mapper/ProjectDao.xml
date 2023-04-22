@@ -186,5 +186,55 @@
         where id = #{id}
     </delete>
 
+    <!-- 通过实体类作为筛选条件查询 -->
+    <select id="queryAll" resultType="com.ss.mryy.entity.Project">
+        SELECT id,
+               proexplain,
+               proprice,
+               prostep,
+               protypeid,
+               proname,
+               imageid,
+               prostatus,
+               busid,
+               tecid
+        FROM project
+    </select>
+
+    <!-- 获取项目信息 -->
+    <select id="getProInfos" resultMap="ProjectMaps">
+        SELECT p.id         pid,
+               p.proexplain proexplain,
+               p.proprice   proprice,
+               p.prostep    prostep,
+               p.protypeid  protypeid,
+               p.proname    proname,
+               p.imageid    imageid,
+               p.prostatus  prostatus,
+               p.busid      busid,
+               p.tecid      tecid,
+
+               i.imageurl   imageurl
+        from project p,
+             image i
+        where p.imageid = i.id
+          and p.prostatus = '1'
+    </select>
+
+    <resultMap type="com.ss.mryy.entity.Project" id="ProjectMaps">
+        <result property="id" column="pid" jdbcType="INTEGER"/>
+        <result property="proexplain" column="proexplain" jdbcType="VARCHAR"/>
+        <result property="proprice" column="proprice" jdbcType="VARCHAR"/>
+        <result property="prostep" column="prostep" jdbcType="VARCHAR"/>
+        <result property="protypeid" column="protypeid" jdbcType="INTEGER"/>
+        <result property="proname" column="proname" jdbcType="VARCHAR"/>
+        <result property="imageid" column="imageid" jdbcType="INTEGER"/>
+        <result property="prostatus" column="prostatus" jdbcType="VARCHAR"/>
+        <result property="busid" column="busid" jdbcType="INTEGER"/>
+        <result property="tecid" column="tecid" jdbcType="INTEGER"/>
+        <!--映射imageurl-->
+        <result property="image.imageurl" column="imageurl" jdbcType="VARCHAR"/>
+    </resultMap>
+
 </mapper>
 

@@ -1,6 +1,7 @@
 package com.ss.mryy.service;
 
 import com.ss.mryy.entity.Project;
+import com.ss.mryy.response.ResponseData;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
@@ -57,6 +58,6 @@ public interface ProjectService {
      * 获取所有的项目信息
      * @return
      */
-    //ResponseData getProinfos(int page, int limit);
+    ResponseData getProInfos();
 
 }

@@ -49,6 +49,15 @@ public class Project implements Serializable {
 
     private Long tecid;
 
+    private Image image;
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
 
     public Long getId() {
         return id;

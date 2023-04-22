@@ -2,6 +2,8 @@ package com.ss.mryy.service.impl;
 
 import com.ss.mryy.dao.ProjectDao;
 import com.ss.mryy.entity.Project;
+import com.ss.mryy.response.ResponseCode;
+import com.ss.mryy.response.ResponseData;
 import com.ss.mryy.service.ProjectService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -9,6 +11,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Project)表服务实现类
@@ -80,23 +83,15 @@ public class ProjectServiceImpl implements ProjectService {
         return this.projectDao.deleteById(id) > 0;
     }
 
-//    @Override
-//    public ResponseData getProinfos(int page, int limit) {
-        /*try{
-            // 第1页   0   第2页 10  第3页  20
-
-            int start = (page-1)*limit;
-            //查询当页的数据
-            List<Project> projects = projectDao.getProinfos(start,limit);
-            //总条数
-            Long count = projectDao.queryCount();
-
-            return new ResponseData(ResponseCode.SUCCESS,projects,count);
-        }catch (Exception e){
+    @Override
+    public ResponseData getProInfos() {
+        try {
+            List<Project> projects = projectDao.getProInfos();
+            return new ResponseData(ResponseCode.SUCCESS, projects);
+        } catch (Exception e) {
             System.out.println(e);
             return new ResponseData(ResponseCode.FAIL);
-        }*/
-//        return new ResponseData(ResponseCode.FAIL);
-//
-//    }
+        }
+    }
+
 }
