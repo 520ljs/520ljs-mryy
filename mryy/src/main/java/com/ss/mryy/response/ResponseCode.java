@@ -12,9 +12,20 @@ public enum ResponseCode {
 
     SUCCESS("200", "success"),
 
-    FAIL("500", "未知错误"),
+    /**
+     * 9000 - 9999 错误信息
+     */
+    FAIL("9000", "未知错误"),
 
-    FAIL_DAO("501", "数据库断开连接");
+    FAIL_DAO("9001", "数据库断开连接"),
+
+    ERROR_1("9002", "手机号为空"),
+
+    ERROR_2("9003", "密码为空"),
+
+    ERROR_3("9004", "用户名为空"),
+
+    ERROR_4("9005", "用户名已经存在");
 
     private String code;
 

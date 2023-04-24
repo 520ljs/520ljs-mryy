@@ -80,5 +80,12 @@ public interface UserDao {
      */
     int deleteById(Long id);
 
+    /**
+     * 根据用户名查询用户信息
+     * @param username
+     * @return
+     */
+    User queryUserByUserName(String username);
+
 }
 

@@ -173,5 +173,20 @@
         where id = #{id}
     </delete>
 
+    <!-- 通过用户名查询用户信息 -->
+    <select id="queryUserByUserName" resultType="com.ss.mryy.entity.User">
+        SELECT id,
+               nickname,
+               openid,
+               imageurl,
+               sessionkey,
+               token,
+               username,
+               phone,
+               password
+        FROM user
+        where username = #{username}
+    </select>
+
 </mapper>
 

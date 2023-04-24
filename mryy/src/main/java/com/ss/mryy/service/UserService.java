@@ -1,6 +1,7 @@
 package com.ss.mryy.service;
 
 import com.ss.mryy.entity.User;
+import com.ss.mryy.response.ResponseData;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
@@ -53,4 +54,10 @@ public interface UserService {
      */
     boolean deleteById(Long id);
 
+    /**
+     * 注册
+     * @param user
+     * @return
+     */
+    ResponseData userRegister(User user);
 }

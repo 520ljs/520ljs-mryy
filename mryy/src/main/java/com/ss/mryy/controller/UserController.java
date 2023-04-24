@@ -1,7 +1,9 @@
 package com.ss.mryy.controller;
 
 import com.ss.mryy.entity.User;
+import com.ss.mryy.response.ResponseData;
 import com.ss.mryy.service.UserService;
+import io.swagger.annotations.Api;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,7 @@ import javax.annotation.Resource;
  * @author makejava
  * @since 2023-04-20 01:52:45
  */
+@Api(tags = "用户接口")
 @RestController
 @RequestMapping("user")
 public class UserController {
@@ -80,5 +83,11 @@ public class UserController {
         return ResponseEntity.ok(this.userService.deleteById(id));
     }
 
+    @PostMapping("userRegister")
+    public ResponseData userRegister(User user){
+        System.out.println("user = " + user);
+
+        return userService.userRegister(user);
+    }
 }
 
