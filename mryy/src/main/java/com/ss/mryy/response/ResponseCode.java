@@ -25,7 +25,8 @@ public enum ResponseCode {
 
     ERROR_3("9004", "用户名为空"),
 
-    ERROR_4("9005", "用户名已经存在");
+    ERROR_4("9005", "用户名已经存在"),
+    ERROR_5("9006", "账号密码不匹配");
 
     private String code;
 

@@ -84,10 +84,19 @@ public class UserController {
     }
 
     @PostMapping("userRegister")
-    public ResponseData userRegister(User user){
+    public ResponseData userRegister(User user) {
         System.out.println("user = " + user);
 
         return userService.userRegister(user);
+    }
+
+    @PostMapping("userLogin")
+    public ResponseData userLogin(String phone, String password, String code) {
+        System.out.println("phone" + phone);
+        System.out.println("password" + password);
+        System.out.println("code" + code);
+
+        return userService.userLogin(phone, password, code);
     }
 }
 

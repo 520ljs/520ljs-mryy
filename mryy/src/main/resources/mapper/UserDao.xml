@@ -188,5 +188,20 @@
         where username = #{username}
     </select>
 
+    <!-- 通过手机号和密码 查询用户信息-->
+    <select id="queryUserByPhoneAndPwd" resultType="com.ss.mryy.entity.User">
+        SELECT id,
+               nickname,
+               openid,
+               imageurl,
+               sessionkey,
+               token,
+               username,
+               phone,
+               password
+        FROM user
+        WHERE phone = #{phone} and password = #{password} /* 0,1代表传进来的是第几个参数 */
+    </select>
+
 </mapper>
 

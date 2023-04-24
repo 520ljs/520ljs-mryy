@@ -6,6 +6,11 @@ package com.ss.mryy.util;
  */
 public class StringUtil {
 
+    /**
+     * 非空校验
+     * @param str
+     * @return
+     */
     public static boolean isNull(String str) {
         if (str == null) {
             return true;

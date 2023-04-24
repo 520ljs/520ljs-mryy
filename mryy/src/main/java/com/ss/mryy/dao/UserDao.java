@@ -82,10 +82,19 @@ public interface UserDao {
 
     /**
      * 根据用户名查询用户信息
+     *
      * @param username
      * @return
      */
     User queryUserByUserName(String username);
 
+    /**
+     * 根据手机号，密码 查询用户
+     *
+     * @param phone
+     * @param password
+     * @return
+     */
+    User queryUserByPhoneAndPwd(@Param("phone") String phone, @Param("password") String password);
 }
 

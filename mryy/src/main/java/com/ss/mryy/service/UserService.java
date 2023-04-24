@@ -60,4 +60,13 @@ public interface UserService {
      * @return
      */
     ResponseData userRegister(User user);
+
+    /**
+     * 登录
+     * @param phone
+     * @param password
+     * @param code
+     * @return
+     */
+    ResponseData userLogin(String phone, String password, String code);
 }
