@@ -94,4 +94,17 @@ public class ProjectServiceImpl implements ProjectService {
         }
     }
 
+    @Override
+    public ResponseData getProInfoById(Long id) {
+
+        try {
+            Project project = projectDao.queryById(id);
+            return new ResponseData(ResponseCode.SUCCESS, project);
+        } catch (Exception e) {
+            System.out.println(e);
+            return new ResponseData(ResponseCode.FAIL);
+        }
+
+    }
+
 }

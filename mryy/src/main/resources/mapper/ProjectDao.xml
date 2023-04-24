@@ -16,19 +16,24 @@
     </resultMap>
 
     <!--查询单个-->
-    <select id="queryById" resultMap="ProjectMap">
-        select id,
-               proexplain,
-               proprice,
-               prostep,
-               protypeid,
-               proname,
-               imageid,
-               prostatus,
-               busid,
-               tecid
-        from project
-        where id = #{id}
+    <select id="queryById" resultMap="ProjectMaps">
+        SELECT p.id         pid,
+               p.proexplain proexplain,
+               p.proprice   proprice,
+               p.prostep    prostep,
+               p.protypeid  protypeid,
+               p.proname    proname,
+               p.imageid    imageid,
+               p.prostatus  prostatus,
+               p.busid      busid,
+               p.tecid      tecid,
+
+               i.imageurl   imageurl
+        FROM project p,
+             image i
+        WHERE p.imageid = i.id
+          and p.prostatus = '1'
+          and p.id = #{id}
     </select>
 
     <!--查询指定行数据-->

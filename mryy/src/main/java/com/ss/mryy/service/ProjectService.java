@@ -60,4 +60,10 @@ public interface ProjectService {
      */
     ResponseData getProInfos();
 
+    /**
+     * 根据id获取项目信息
+     * @param id
+     * @return
+     */
+    ResponseData getProInfoById(Long id);
 }

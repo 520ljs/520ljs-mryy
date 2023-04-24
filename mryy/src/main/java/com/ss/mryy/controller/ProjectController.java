@@ -91,5 +91,10 @@ public class ProjectController {
         return projectService.getProInfos();
     }
 
+    @GetMapping("getProInfoById")
+    public ResponseData getProInfoById(Long id) {
+        System.out.println("id：" + id);
+        return projectService.getProInfoById(id);
+    }
 }
 
