@@ -1,6 +1,7 @@
 package com.ss.mryy.controller;
 
 import com.ss.mryy.entity.Business;
+import com.ss.mryy.response.ResponseData;
 import com.ss.mryy.service.BusinessService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -82,6 +83,13 @@ public class BusinessController {
     @DeleteMapping
     public ResponseEntity<Boolean> deleteById(Long id) {
         return ResponseEntity.ok(this.businessService.deleteById(id));
+    }
+
+    @GetMapping("getBusInfoByProId")
+    public ResponseData getBusInfoByProId(Long id) {
+
+        System.out.println("id：" + id);
+        return businessService.getBusInfoByProId(id);
     }
 
 }

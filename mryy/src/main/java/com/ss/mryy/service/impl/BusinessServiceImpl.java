@@ -2,6 +2,8 @@ package com.ss.mryy.service.impl;
 
 import com.ss.mryy.entity.Business;
 import com.ss.mryy.dao.BusinessDao;
+import com.ss.mryy.response.ResponseCode;
+import com.ss.mryy.response.ResponseData;
 import com.ss.mryy.service.BusinessService;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
@@ -78,5 +80,18 @@ public class BusinessServiceImpl implements BusinessService {
     @Override
     public boolean deleteById(Long id) {
         return this.businessDao.deleteById(id) > 0;
+    }
+
+    @Override
+    public ResponseData getBusInfoByProId(Long id) {
+
+        try {
+            Business busInfoByProId = businessDao.getBusInfoByProId(id);
+            return new ResponseData(ResponseCode.SUCCESS,busInfoByProId);
+        } catch (Exception e) {
+            System.out.println(e);
+            return new ResponseData(ResponseCode.FAIL);
+        }
+
     }
 }

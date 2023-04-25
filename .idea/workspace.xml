@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c80113-a564-49e7-9bcd-ef926e38cb75" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/ProjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/resources/mapper/ProjectDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/resources/mapper/ProjectDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/controller/BusinessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/controller/BusinessController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/dao/BusinessDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/dao/BusinessDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/entity/Business.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/entity/Business.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/BusinessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/BusinessService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/BusinessServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/BusinessServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/resources/mapper/BusinessDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/resources/mapper/BusinessDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/1000phone/SourceCode/ljsmr/qf-spring-boot",
+    "last_opened_file_path": "D:/1000phone/SourceCode/ljsmr/520ljs-mryy",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -123,7 +125,8 @@
       <workItem from="1682038958189" duration="25229000" />
       <workItem from="1682125579537" duration="11183000" />
       <workItem from="1682243006554" duration="601000" />
-      <workItem from="1682298104599" duration="21769000" />
+      <workItem from="1682298104599" duration="21929000" />
+      <workItem from="1682385022090" duration="5344000" />
     </task>
     <servers />
   </component>

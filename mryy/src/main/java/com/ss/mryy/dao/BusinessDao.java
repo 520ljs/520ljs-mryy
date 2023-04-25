@@ -80,5 +80,12 @@ public interface BusinessDao {
      */
     int deleteById(Long id);
 
+    /**
+     * 根据项目的id，获取项目对象的商家信息以及项目信息
+     * @param id
+     * @return
+     */
+    Business getBusInfoByProId(Long id);
+
 }
 

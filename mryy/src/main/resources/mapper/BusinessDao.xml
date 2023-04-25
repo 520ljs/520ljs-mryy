@@ -135,5 +135,45 @@
         where id = #{id}
     </delete>
 
+    <!--
+        type:查询出来的字段  映射成哪一个对象
+        id：命名  唯一
+    -->
+    <resultMap type="com.ss.mryy.entity.Business" id="BusinessMaps">
+        <result property="id" column="bid" jdbcType="INTEGER"/>
+        <result property="busname" column="busname" jdbcType="VARCHAR"/>
+        <result property="busaddress" column="busaddress" jdbcType="VARCHAR"/>
+        <result property="busexplain" column="busexplain" jdbcType="VARCHAR"/>
+        <result property="bustell" column="bustell" jdbcType="VARCHAR"/>
+        <result property="servertime" column="servertime" jdbcType="VARCHAR"/>
+
+        <!--项目名称和id-->
+        <result property="project.id" column="pid"></result>
+        <result property="project.proname" column="proname"></result>
+
+        <!--图片的路径-->
+        <result property="project.image.imageurl" column="imageurl"></result>
+    </resultMap>
+
+    <select id="getBusInfoByProId" resultMap="BusinessMaps">
+        SELECT b.id         bid,
+               b.busname    busname,
+               b.busaddress busaddress,
+               b.busexplain busexplain,
+               b.bustell    bustell,
+               b.servertime servertime,
+
+               p.id         pid,
+               p.proname    proname,
+
+               i.imageurl   imageurl
+        FROM business b,
+             project p,
+             image i
+        WHERE p.busid = b.id
+          AND p.imageid = i.id
+          AND p.id = #{id}
+    </select>
+
 </mapper>
 

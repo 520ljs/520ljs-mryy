@@ -1,6 +1,7 @@
 package com.ss.mryy.service;
 
 import com.ss.mryy.entity.Business;
+import com.ss.mryy.response.ResponseData;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
@@ -52,5 +53,12 @@ public interface BusinessService {
      * @return 是否成功
      */
     boolean deleteById(Long id);
+
+    /**
+     * 根据项目的id，获取项目对象的商家信息以及项目信息
+     * @param id
+     * @return
+     */
+    ResponseData getBusInfoByProId(Long id);
 
 }
