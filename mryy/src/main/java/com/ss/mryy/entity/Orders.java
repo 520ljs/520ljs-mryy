@@ -57,6 +57,25 @@ public class Orders implements Serializable {
 
     private Long tecid;
 
+    private Project project;
+
+    private Business business;
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
+    public Business getBusiness() {
+        return business;
+    }
+
+    public void setBusiness(Business business) {
+        this.business = business;
+    }
 
     public Long getId() {
         return id;

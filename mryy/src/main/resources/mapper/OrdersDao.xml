@@ -17,7 +17,7 @@
         <result property="tecid" column="tecid" jdbcType="INTEGER"/>
     </resultMap>
 
-    <!--<resultMap type="com.ss.mryy.entity.Orders" id="OrdersMaps">
+    <resultMap type="com.ss.mryy.entity.Orders" id="OrdersMaps">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="openid" column="openid" jdbcType="VARCHAR"/>
         <result property="proname" column="proname" jdbcType="VARCHAR"/>
@@ -37,19 +37,41 @@
         <result property="business.servertime" column="servertime"></result>
 
         <result property="project.proprice" column="proprice"></result>
-    </resultMap>-->
+    </resultMap>
 
     <!--queryOrders-->
-    <select id="queryOrders" resultType="com.ss.mryy.entity.Orders">
-        SELECT * from orders
-        <where>
-            <if test="openid != null and openid != ''">
-                and openid = #{openid}
-            </if>
-            <if test="orderstate != null and orderstate != ''">
-                and orderstate = #{orderstate}
-            </if>
-        </where>
+    <select id="queryOrders" resultMap="OrdersMaps">
+        SELECT
+        o.id id,
+        o.openid openid,
+        o.proname proname,
+        o.makedate makedate,
+        o.username username,
+        o.orderstate orderstate,
+        o.placedate placedate,
+        o.usertell usertell,
+        o.information information,
+        o.busid busid,
+        o.proid proid,
+        o.tecid tecid,
+
+        i.imageurl imageurl,
+
+        b.busname busname,
+        b.servertime servertime,
+
+        p.proprice proprice
+
+        FROM orders o,project p,business b,image i
+        WHERE o.proid = p.id
+        AND o.busid = b.id
+        AND p.imageid = i.id
+        <if test="openid != null and openid != ''">
+            and o.openid = #{openid}
+        </if>
+        <if test="orderstate != null and orderstate != ''">
+            and o.orderstate = #{orderstate}
+        </if>
     </select>
 
     <!--查询单个-->
