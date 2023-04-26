@@ -96,5 +96,12 @@ public interface UserDao {
      * @return
      */
     User queryUserByPhoneAndPwd(@Param("phone") String phone, @Param("password") String password);
+
+    /**
+     * 根据token查询openid
+     * @param token
+     * @return
+     */
+    String queryOpenidByToken(String token);
 }
 

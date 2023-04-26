@@ -1,6 +1,7 @@
 package com.ss.mryy.service;
 
 import com.ss.mryy.entity.Order;
+import com.ss.mryy.response.ResponseData;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
@@ -53,4 +54,12 @@ public interface OrderService {
      */
     boolean deleteById(Long id);
 
+    /**
+     * 创建一个订单
+     *
+     * @param order
+     * @param token
+     * @return
+     */
+    ResponseData createOrder(Order order, String token);
 }

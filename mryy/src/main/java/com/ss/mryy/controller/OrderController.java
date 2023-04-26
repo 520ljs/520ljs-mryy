@@ -1,7 +1,9 @@
 package com.ss.mryy.controller;
 
 import com.ss.mryy.entity.Order;
+import com.ss.mryy.response.ResponseData;
 import com.ss.mryy.service.OrderService;
+import io.swagger.annotations.Api;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,7 @@ import javax.annotation.Resource;
  * @author makejava
  * @since 2023-04-20 01:52:41
  */
+@Api(tags = "订单接口")
 @RestController
 @RequestMapping("order")
 public class OrderController {
@@ -80,5 +83,12 @@ public class OrderController {
         return ResponseEntity.ok(this.orderService.deleteById(id));
     }
 
+    @PostMapping("createOrder")
+    public ResponseData createOrder(Order order, String token) {
+        System.out.println("token = " + token);
+        System.out.println("order = " + order);
+
+        return orderService.createOrder(order, token);
+    }
 }
 

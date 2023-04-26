@@ -200,7 +200,15 @@
                phone,
                password
         FROM user
-        WHERE phone = #{phone} and password = #{password} /* 0,1代表传进来的是第几个参数 */
+        WHERE phone = #{phone}
+          and password = #{password} /* 0,1代表传进来的是第几个参数 */
+    </select>
+
+    <!-- 根据token查询openid -->
+    <select id="queryOpenidByToken" resultType="java.lang.String">
+        SELECT openid
+        FROM user
+        WHERE token = #{token}
     </select>
 
 </mapper>

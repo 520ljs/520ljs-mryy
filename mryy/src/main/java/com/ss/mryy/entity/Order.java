@@ -154,5 +154,22 @@ public class Order implements Serializable {
         this.tecid = tecid;
     }
 
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", openid='" + openid + '\'' +
+                ", proname='" + proname + '\'' +
+                ", makedate='" + makedate + '\'' +
+                ", username='" + username + '\'' +
+                ", orderstate='" + orderstate + '\'' +
+                ", placedate='" + placedate + '\'' +
+                ", usertell='" + usertell + '\'' +
+                ", information='" + information + '\'' +
+                ", busid=" + busid +
+                ", proid=" + proid +
+                ", tecid=" + tecid +
+                '}';
+    }
 }
 
