@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 /**
  * (Orders)表服务实现类
@@ -113,6 +114,25 @@ public class OrdersServiceImpl implements OrdersService {
 
             return new ResponseData(ResponseCode.SUCCESS);
         } catch (Exception e) {
+            System.out.println(e);
+            return new ResponseData(ResponseCode.FAIL);
+        }
+    }
+
+    @Override
+    public ResponseData getOrderByState(String orderstate, String token) {
+        try{
+            //1.根据token获取oipenid
+            String openid = userDao.queryOpenidByToken(token);
+
+            //2.根据openid和orderstate查询订单表  获取数据
+            Orders order = new Orders();
+            order.setOpenid(openid);
+            order.setOrderstate(orderstate);
+            List<Orders> orders = ordersDao.queryOrders(order);
+
+            return new ResponseData(ResponseCode.SUCCESS,orders);
+        }catch (Exception e){
             System.out.println(e);
             return new ResponseData(ResponseCode.FAIL);
         }

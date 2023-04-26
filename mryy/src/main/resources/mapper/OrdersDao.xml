@@ -17,6 +17,41 @@
         <result property="tecid" column="tecid" jdbcType="INTEGER"/>
     </resultMap>
 
+    <!--<resultMap type="com.ss.mryy.entity.Orders" id="OrdersMaps">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="openid" column="openid" jdbcType="VARCHAR"/>
+        <result property="proname" column="proname" jdbcType="VARCHAR"/>
+        <result property="makedate" column="makedate" jdbcType="VARCHAR"/>
+        <result property="username" column="username" jdbcType="VARCHAR"/>
+        <result property="orderstate" column="orderstate" jdbcType="VARCHAR"/>
+        <result property="placedate" column="placedate" jdbcType="VARCHAR"/>
+        <result property="usertell" column="usertell" jdbcType="VARCHAR"/>
+        <result property="information" column="information" jdbcType="VARCHAR"/>
+        <result property="busid" column="busid" jdbcType="INTEGER"/>
+        <result property="proid" column="proid" jdbcType="INTEGER"/>
+        <result property="tecid" column="tecid" jdbcType="INTEGER"/>
+
+        <result property="project.image.imageurl" column="imageurl"></result>
+
+        <result property="business.busname" column="busname"></result>
+        <result property="business.servertime" column="servertime"></result>
+
+        <result property="project.proprice" column="proprice"></result>
+    </resultMap>-->
+
+    <!--queryOrders-->
+    <select id="queryOrders" resultType="com.ss.mryy.entity.Orders">
+        SELECT * from orders
+        <where>
+            <if test="openid != null and openid != ''">
+                and openid = #{openid}
+            </if>
+            <if test="orderstate != null and orderstate != ''">
+                and orderstate = #{orderstate}
+            </if>
+        </where>
+    </select>
+
     <!--查询单个-->
     <select id="queryById" resultMap="OrdersMap">
         select id,

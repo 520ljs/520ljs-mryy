@@ -80,5 +80,11 @@ public interface OrdersDao {
      */
     int deleteById(Long id);
 
+    /**
+     * 全查询   通过实体作为筛选条件查询
+     * @return
+     */
+    List<Orders> queryOrders(Orders order);
+
 }
 

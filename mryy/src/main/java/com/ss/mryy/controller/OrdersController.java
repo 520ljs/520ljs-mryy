@@ -90,5 +90,12 @@ public class OrdersController {
         return ordersService.createOrder(orders, token);
     }
 
+    @GetMapping("getOrdersByState")
+    public ResponseData getOrderByState(String orderstate, String token) {
+        System.out.println("orderstate = " + orderstate);
+        System.out.println("token = " + token);
+        return ordersService.getOrderByState(orderstate,token );
+    }
+
 }
 

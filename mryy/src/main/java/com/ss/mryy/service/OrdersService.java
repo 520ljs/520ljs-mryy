@@ -63,4 +63,11 @@ public interface OrdersService {
      */
     ResponseData createOrder(Orders orders, String token);
 
+    /**
+     * 根据订单状态 和 token 获取订单
+     * @param orderstate
+     * @param token
+     * @return
+     */
+    ResponseData getOrderByState(String orderstate,String token);
 }
