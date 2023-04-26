@@ -995,7 +995,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="292" parent="279" name="order">
+    <table id="292" parent="279" name="orders">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
@@ -1102,7 +1102,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="314" parent="292" name="id">
-      <AutoIncrement>37</AutoIncrement>
+      <AutoIncrement>38</AutoIncrement>
       <Comment>订单id</Comment>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
@@ -1351,7 +1351,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="362" parent="298" name="id">
-      <AutoIncrement>45</AutoIncrement>
+      <AutoIncrement>47</AutoIncrement>
       <Comment>用户id</Comment>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>

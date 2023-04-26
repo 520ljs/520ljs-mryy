@@ -1,11 +1,11 @@
 package com.ss.mryy.service.impl;
 
-import com.ss.mryy.dao.OrderDao;
+import com.ss.mryy.dao.OrdersDao;
 import com.ss.mryy.dao.UserDao;
-import com.ss.mryy.entity.Order;
+import com.ss.mryy.entity.Orders;
 import com.ss.mryy.response.ResponseCode;
 import com.ss.mryy.response.ResponseData;
-import com.ss.mryy.service.OrderService;
+import com.ss.mryy.service.OrdersService;
 import com.ss.mryy.util.StringUtil;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -17,15 +17,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * (Order)表服务实现类
+ * (Orders)表服务实现类
  *
  * @author makejava
- * @since 2023-04-20 01:52:42
+ * @since 2023-04-26 12:26:03
  */
-@Service("orderService")
-public class OrderServiceImpl implements OrderService {
+@Service("ordersService")
+public class OrdersServiceImpl implements OrdersService {
     @Resource
-    private OrderDao orderDao;
+    private OrdersDao ordersDao;
 
     @Resource
     private UserDao userDao;
@@ -37,45 +37,45 @@ public class OrderServiceImpl implements OrderService {
      * @return 实例对象
      */
     @Override
-    public Order queryById(Long id) {
-        return this.orderDao.queryById(id);
+    public Orders queryById(Long id) {
+        return this.ordersDao.queryById(id);
     }
 
     /**
      * 分页查询
      *
-     * @param order       筛选条件
+     * @param orders      筛选条件
      * @param pageRequest 分页对象
      * @return 查询结果
      */
     @Override
-    public Page<Order> queryByPage(Order order, PageRequest pageRequest) {
-        long total = this.orderDao.count(order);
-        return new PageImpl<>(this.orderDao.queryAllByLimit(order, pageRequest), pageRequest, total);
+    public Page<Orders> queryByPage(Orders orders, PageRequest pageRequest) {
+        long total = this.ordersDao.count(orders);
+        return new PageImpl<>(this.ordersDao.queryAllByLimit(orders, pageRequest), pageRequest, total);
     }
 
     /**
      * 新增数据
      *
-     * @param order 实例对象
+     * @param orders 实例对象
      * @return 实例对象
      */
     @Override
-    public Order insert(Order order) {
-        this.orderDao.insert(order);
-        return order;
+    public Orders insert(Orders orders) {
+        this.ordersDao.insert(orders);
+        return orders;
     }
 
     /**
      * 修改数据
      *
-     * @param order 实例对象
+     * @param orders 实例对象
      * @return 实例对象
      */
     @Override
-    public Order update(Order order) {
-        this.orderDao.update(order);
-        return this.queryById(order.getId());
+    public Orders update(Orders orders) {
+        this.ordersDao.update(orders);
+        return this.queryById(orders.getId());
     }
 
     /**
@@ -86,11 +86,11 @@ public class OrderServiceImpl implements OrderService {
      */
     @Override
     public boolean deleteById(Long id) {
-        return this.orderDao.deleteById(id) > 0;
+        return this.ordersDao.deleteById(id) > 0;
     }
 
     @Override
-    public ResponseData createOrder(Order order, String token) {
+    public ResponseData createOrder(Orders order, String token) {
         // 1.非空校验
         String username = order.getUsername();
         String usertell = order.getUsertell();
@@ -109,7 +109,7 @@ public class OrderServiceImpl implements OrderService {
             order.setOrderstate("0");//状态默认为0
 
             // 4.生成订单
-            orderDao.insert(order);
+            ordersDao.insert(order);
 
             return new ResponseData(ResponseCode.SUCCESS);
         } catch (Exception e) {

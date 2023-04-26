@@ -1,17 +1,17 @@
 package com.ss.mryy.service;
 
-import com.ss.mryy.entity.Order;
+import com.ss.mryy.entity.Orders;
 import com.ss.mryy.response.ResponseData;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
 /**
- * (Order)表服务接口
+ * (Orders)表服务接口
  *
  * @author makejava
- * @since 2023-04-20 01:52:42
+ * @since 2023-04-26 12:26:03
  */
-public interface OrderService {
+public interface OrdersService {
 
     /**
      * 通过ID查询单条数据
@@ -19,32 +19,32 @@ public interface OrderService {
      * @param id 主键
      * @return 实例对象
      */
-    Order queryById(Long id);
+    Orders queryById(Long id);
 
     /**
      * 分页查询
      *
-     * @param order       筛选条件
+     * @param orders      筛选条件
      * @param pageRequest 分页对象
      * @return 查询结果
      */
-    Page<Order> queryByPage(Order order, PageRequest pageRequest);
+    Page<Orders> queryByPage(Orders orders, PageRequest pageRequest);
 
     /**
      * 新增数据
      *
-     * @param order 实例对象
+     * @param orders 实例对象
      * @return 实例对象
      */
-    Order insert(Order order);
+    Orders insert(Orders orders);
 
     /**
      * 修改数据
      *
-     * @param order 实例对象
+     * @param orders 实例对象
      * @return 实例对象
      */
-    Order update(Order order);
+    Orders update(Orders orders);
 
     /**
      * 通过主键删除数据
@@ -57,9 +57,10 @@ public interface OrderService {
     /**
      * 创建一个订单
      *
-     * @param order
+     * @param orders
      * @param token
      * @return
      */
-    ResponseData createOrder(Order order, String token);
+    ResponseData createOrder(Orders orders, String token);
+
 }

@@ -3,13 +3,13 @@ package com.ss.mryy.entity;
 import java.io.Serializable;
 
 /**
- * (Order)实体类
+ * (Orders)实体类
  *
  * @author makejava
- * @since 2023-04-20 01:52:42
+ * @since 2023-04-26 12:26:02
  */
-public class Order implements Serializable {
-    private static final long serialVersionUID = 263636260857664650L;
+public class Orders implements Serializable {
+    private static final long serialVersionUID = 691875707802353912L;
     /**
      * 订单id
      */
@@ -156,7 +156,7 @@ public class Order implements Serializable {
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "Orders{" +
                 "id=" + id +
                 ", openid='" + openid + '\'' +
                 ", proname='" + proname + '\'' +

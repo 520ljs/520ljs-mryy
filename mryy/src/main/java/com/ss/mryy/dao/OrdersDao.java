@@ -1,18 +1,18 @@
 package com.ss.mryy.dao;
 
-import com.ss.mryy.entity.Order;
+import com.ss.mryy.entity.Orders;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
 /**
- * (Order)表数据库访问层
+ * (Orders)表数据库访问层
  *
  * @author makejava
- * @since 2023-04-20 01:52:42
+ * @since 2023-04-26 12:26:02
  */
-public interface OrderDao {
+public interface OrdersDao {
 
     /**
      * 通过ID查询单条数据
@@ -20,57 +20,57 @@ public interface OrderDao {
      * @param id 主键
      * @return 实例对象
      */
-    Order queryById(Long id);
+    Orders queryById(Long id);
 
     /**
      * 查询指定行数据
      *
-     * @param order    查询条件
+     * @param orders   查询条件
      * @param pageable 分页对象
      * @return 对象列表
      */
-    List<Order> queryAllByLimit(Order order, @Param("pageable") Pageable pageable);
+    List<Orders> queryAllByLimit(Orders orders, @Param("pageable") Pageable pageable);
 
     /**
      * 统计总行数
      *
-     * @param order 查询条件
+     * @param orders 查询条件
      * @return 总行数
      */
-    long count(Order order);
+    long count(Orders orders);
 
     /**
      * 新增数据
      *
-     * @param order 实例对象
+     * @param orders 实例对象
      * @return 影响行数
      */
-    int insert(Order order);
+    int insert(Orders orders);
 
     /**
      * 批量新增数据（MyBatis原生foreach方法）
      *
-     * @param entities List<Order> 实例对象列表
+     * @param entities List<Orders> 实例对象列表
      * @return 影响行数
      */
-    int insertBatch(@Param("entities") List<Order> entities);
+    int insertBatch(@Param("entities") List<Orders> entities);
 
     /**
      * 批量新增或按主键更新数据（MyBatis原生foreach方法）
      *
-     * @param entities List<Order> 实例对象列表
+     * @param entities List<Orders> 实例对象列表
      * @return 影响行数
      * @throws org.springframework.jdbc.BadSqlGrammarException 入参是空List的时候会抛SQL语句错误的异常，请自行校验入参
      */
-    int insertOrUpdateBatch(@Param("entities") List<Order> entities);
+    int insertOrUpdateBatch(@Param("entities") List<Orders> entities);
 
     /**
      * 修改数据
      *
-     * @param order 实例对象
+     * @param orders 实例对象
      * @return 影响行数
      */
-    int update(Order order);
+    int update(Orders orders);
 
     /**
      * 通过主键删除数据
