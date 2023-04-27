@@ -224,6 +224,8 @@
              image i
         where p.imageid = i.id
           and p.prostatus = '1'
+            limit #{page}
+            , #{limit}
     </select>
 
     <resultMap type="com.ss.mryy.entity.Project" id="ProjectMaps">
@@ -241,5 +243,10 @@
         <result property="image.imageurl" column="imageurl" jdbcType="VARCHAR"/>
     </resultMap>
 
+    <select id="queryCount" resultType="long">
+        SELECT count(id)
+        FROM project
+        where prostatus = '1'
+    </select>
 </mapper>
 

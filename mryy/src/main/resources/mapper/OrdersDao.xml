@@ -66,6 +66,7 @@
         WHERE o.proid = p.id
         AND o.busid = b.id
         AND p.imageid = i.id
+        /*传递的参数不为空 并且 不为空字符串*/
         <if test="openid != null and openid != ''">
             and o.openid = #{openid}
         </if>

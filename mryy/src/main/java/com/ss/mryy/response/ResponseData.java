@@ -16,7 +16,16 @@ public class ResponseData {
 
     private Object data;
 
+    private Long count;
+
     public ResponseData() {
+    }
+
+    public ResponseData(ResponseCode responseCode, Object data, Long count) {
+        this.code = responseCode.getCode();
+        this.msg = responseCode.getMsg();
+        this.data = data;
+        this.count = count;
     }
 
     public ResponseData(ResponseCode responseCode, Object data) {
@@ -39,6 +48,14 @@ public class ResponseData {
     public ResponseData(String code, String massage) {
         this.code = code;
         this.msg = massage;
+    }
+
+    public Long getCount() {
+        return count;
+    }
+
+    public void setCount(Long count) {
+        this.count = count;
     }
 
     public String getCode() {

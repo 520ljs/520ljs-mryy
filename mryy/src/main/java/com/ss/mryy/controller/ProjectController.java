@@ -86,9 +86,10 @@ public class ProjectController {
 
     @ApiOperation(value = "获取项目信息", notes = "获取所有的项目信息")
     @GetMapping("getProInfos")
-    public ResponseData getProInfos() {
-
-        return projectService.getProInfos();
+    public ResponseData getProInfos(int page, int limit) {
+        System.out.println("page = " + page);
+        System.out.println("limit = " + limit);
+        return projectService.getProInfos(page, limit);
     }
 
     @GetMapping("getProInfoById")
