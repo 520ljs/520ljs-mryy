@@ -63,4 +63,11 @@ public interface TechnicianService {
      */
     ResponseData getTecInfos(int page, int limit);
 
+    /**
+     * 根据id获取技师信息  以及 技师下面的项目信息    技师对项目  多对多
+     *
+     * @param id
+     * @return
+     */
+    ResponseData getTecInfoById(Long id);
 }

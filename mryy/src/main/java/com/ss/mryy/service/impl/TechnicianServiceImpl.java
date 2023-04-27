@@ -97,4 +97,16 @@ public class TechnicianServiceImpl implements TechnicianService {
         }
     }
 
+    @Override
+    public ResponseData getTecInfoById(Long id) {
+
+        //分析  需要哪些字段（技师表）  哪些数据表   项目表    技师和项目的中间表
+        try {
+            Technician tecInfoById = technicianDao.getTecInfoById(id);
+            return new ResponseData(ResponseCode.SUCCESS, tecInfoById);
+        } catch (Exception e) {
+            System.out.println(e);
+            return new ResponseData(ResponseCode.FAIL);
+        }
+    }
 }

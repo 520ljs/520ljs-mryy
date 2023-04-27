@@ -7,6 +7,7 @@
     <list default="true" id="a3c80113-a564-49e7-9bcd-ef926e38cb75" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/controller/TechnicianController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/controller/TechnicianController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/dao/TechnicianDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/dao/TechnicianDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/entity/Technician.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/entity/Technician.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/TechnicianService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/TechnicianService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/TechnicianServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/TechnicianServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mryy/src/main/resources/mapper/TechnicianDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/resources/mapper/TechnicianDao.xml" afterDir="false" />
@@ -63,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/1000phone/SourceCode/ljsmr/cdsf",
+    "last_opened_file_path": "D:/Java/SourceCode/IDEA_workspace/GitHub/taxi/520ljs-online-taxi-public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -127,7 +128,7 @@
       <workItem from="1682298104599" duration="21929000" />
       <workItem from="1682385022090" duration="12381000" />
       <workItem from="1682470935551" duration="28104000" />
-      <workItem from="1682558244196" duration="8410000" />
+      <workItem from="1682558244196" duration="14447000" />
     </task>
     <servers />
   </component>

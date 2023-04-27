@@ -91,5 +91,12 @@ public class TechnicianController {
         return technicianService.getTecInfos(page, limit);
     }
 
+    @GetMapping("getTecInfoById")
+    public ResponseData getTecInfoById(Long id) {
+        System.out.println("id = " + id);
+
+        return technicianService.getTecInfoById(id);
+    }
+
 }
 

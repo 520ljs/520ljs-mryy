@@ -125,7 +125,8 @@
 
     <!--queryCount-->
     <select id="queryCount" resultType="long">
-        select count(id) FROM technician
+        select count(id)
+        FROM technician
     </select>
 
 
@@ -138,5 +139,39 @@
         from technician limit #{page}, #{limit}
     </select>
 
+    <!--getTecInfoById-->
+    <select id="getTecInfoById" resultMap="TechnicianMaps">
+        SELECT t.id          id,
+               t.techexplain techexplain,
+               t.techname    techname,
+               t.busid       busid,
+               t.imageurl    imageurl,
+
+               p.id          pid,
+               p.proname     proname,
+               p.proprice    proprice
+
+        FROM technician t,
+             project p,
+             tecpro tp
+        where tp.tecid = t.id
+          and tp.proid = p.id
+          and t.id = #{id}
+    </select>
+
+    <resultMap type="com.ss.mryy.entity.Technician" id="TechnicianMaps">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="techexplain" column="techexplain" jdbcType="VARCHAR"/>
+        <result property="techname" column="techname" jdbcType="VARCHAR"/>
+        <result property="busid" column="busid" jdbcType="INTEGER"/>
+        <result property="imageurl" column="imageurl" jdbcType="VARCHAR"/>
+
+        <!--项目-->
+        <collection property="projects" ofType="com.ss.mryy.entity.Project">
+            <result property="id" column="pid"></result>
+            <result property="proname" column="proname"></result>
+            <result property="proprice" column="proprice"></result>
+        </collection>
+    </resultMap>
 </mapper>
 

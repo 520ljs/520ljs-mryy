@@ -90,11 +90,28 @@ public interface TechnicianDao {
     /**
      * 查询指定行数据
      *
-     * @param page 页
+     * @param page  页
      * @param limit 条
      * @return 对象列表
      */
-    List<Technician> getTecInfosByLimit(@Param("page") int page,@Param("limit") int limit);
+    List<Technician> getTecInfosByLimit(@Param("page") int page, @Param("limit") int limit);
 
+    /**
+     * 根据id获取技师信息  以及  项目信息
+     *
+     * @param id
+     * @return
+     */
+    Technician getTecInfoById(Long id);
 }
+
+
+
+
+
+
+
+
+
+
 
