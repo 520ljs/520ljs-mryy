@@ -123,5 +123,20 @@
         where id = #{id}
     </delete>
 
+    <!--queryCount-->
+    <select id="queryCount" resultType="long">
+        select count(id) FROM technician
+    </select>
+
+
+    <select id="getTecInfosByLimit" resultType="com.ss.mryy.entity.Technician">
+        select id,
+               techexplain,
+               techname,
+               busid,
+               imageurl
+        from technician limit #{page}, #{limit}
+    </select>
+
 </mapper>
 

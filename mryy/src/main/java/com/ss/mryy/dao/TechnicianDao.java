@@ -80,5 +80,21 @@ public interface TechnicianDao {
      */
     int deleteById(Long id);
 
+    /**
+     * 统计总条数
+     *
+     * @return
+     */
+    Long queryCount();
+
+    /**
+     * 查询指定行数据
+     *
+     * @param page 页
+     * @param limit 条
+     * @return 对象列表
+     */
+    List<Technician> getTecInfosByLimit(@Param("page") int page,@Param("limit") int limit);
+
 }
 

@@ -1,14 +1,17 @@
 package com.ss.mryy.service.impl;
 
-import com.ss.mryy.entity.Technician;
 import com.ss.mryy.dao.TechnicianDao;
+import com.ss.mryy.entity.Technician;
+import com.ss.mryy.response.ResponseCode;
+import com.ss.mryy.response.ResponseData;
 import com.ss.mryy.service.TechnicianService;
-import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Technician)表服务实现类
@@ -79,4 +82,19 @@ public class TechnicianServiceImpl implements TechnicianService {
     public boolean deleteById(Long id) {
         return this.technicianDao.deleteById(id) > 0;
     }
+
+    @Override
+    public ResponseData getTecInfos(int page, int limit) {
+        try {
+            int start = (page - 1) * limit;
+            List<Technician> technicians = technicianDao.getTecInfosByLimit(start, limit);
+            //获取总条数
+            Long count = technicianDao.queryCount();
+            return new ResponseData(ResponseCode.SUCCESS, technicians, count);
+        } catch (Exception e) {
+            System.out.println(e);
+            return new ResponseData(ResponseCode.FAIL);
+        }
+    }
+
 }

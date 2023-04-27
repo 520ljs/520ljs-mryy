@@ -1,6 +1,7 @@
 package com.ss.mryy.service;
 
 import com.ss.mryy.entity.Technician;
+import com.ss.mryy.response.ResponseData;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
@@ -52,5 +53,14 @@ public interface TechnicianService {
      * @return 是否成功
      */
     boolean deleteById(Long id);
+
+    /**
+     * 分页获取技师信息  每页查询5条
+     *
+     * @param page
+     * @param limit
+     * @return
+     */
+    ResponseData getTecInfos(int page, int limit);
 
 }

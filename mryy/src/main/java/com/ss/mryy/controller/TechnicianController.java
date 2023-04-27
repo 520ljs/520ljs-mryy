@@ -1,7 +1,9 @@
 package com.ss.mryy.controller;
 
 import com.ss.mryy.entity.Technician;
+import com.ss.mryy.response.ResponseData;
 import com.ss.mryy.service.TechnicianService;
+import io.swagger.annotations.Api;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,7 @@ import javax.annotation.Resource;
  * @author makejava
  * @since 2023-04-20 01:52:43
  */
+@Api(tags = "技师接口")
 @RestController
 @RequestMapping("technician")
 public class TechnicianController {
@@ -78,6 +81,14 @@ public class TechnicianController {
     @DeleteMapping
     public ResponseEntity<Boolean> deleteById(Long id) {
         return ResponseEntity.ok(this.technicianService.deleteById(id));
+    }
+
+    @GetMapping("getTecInfos")
+    public ResponseData getTecInfos(int page, int limit) {
+        System.out.println("page = " + page);
+        System.out.println("limit = " + limit);
+
+        return technicianService.getTecInfos(page, limit);
     }
 
 }
