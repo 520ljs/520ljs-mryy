@@ -103,6 +103,18 @@
             <artifactId>fastjson2</artifactId>
             <version>2.0.25</version>
         </dependency>
+
+        <!-- 短信发送 依赖 -->
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
     </dependencies>
 
     <build>

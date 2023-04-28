@@ -5,6 +5,8 @@ import com.ss.mryy.response.ResponseData;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
+import java.util.List;
+
 /**
  * (Orders)表服务接口
  *
@@ -65,9 +67,18 @@ public interface OrdersService {
 
     /**
      * 根据订单状态 和 token 获取订单
+     *
      * @param orderstate
      * @param token
      * @return
      */
-    ResponseData getOrderByState(String orderstate,String token);
+    ResponseData getOrderByState(String orderstate, String token);
+
+    /**
+     * 根据订单状态获取订单信息
+     *
+     * @param orderstate
+     * @return
+     */
+    List<Orders> getOrdersByOrderState(String orderstate);
 }

@@ -86,5 +86,6 @@ public interface OrdersDao {
      */
     List<Orders> queryOrders(Orders order);
 
+    List<Orders> queryAll(Orders order);
 }
 

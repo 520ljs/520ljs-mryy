@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c80113-a564-49e7-9bcd-ef926e38cb75" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/controller/TechnicianController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/controller/TechnicianController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/dao/TechnicianDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/dao/TechnicianDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/entity/Technician.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/entity/Technician.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/TechnicianService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/TechnicianService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/TechnicianServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/TechnicianServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/resources/mapper/TechnicianDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/resources/mapper/TechnicianDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/scheduling/SendScheduling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/MryyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/MryyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/dao/OrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/dao/OrdersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/OrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/OrdersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/OrdersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/service/impl/OrdersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mryy/src/main/resources/mapper/OrdersDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/resources/mapper/OrdersDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +129,7 @@
       <workItem from="1682298104599" duration="21929000" />
       <workItem from="1682385022090" duration="12381000" />
       <workItem from="1682470935551" duration="28104000" />
-      <workItem from="1682558244196" duration="14447000" />
+      <workItem from="1682558244196" duration="18025000" />
     </task>
     <servers />
   </component>

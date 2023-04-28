@@ -273,5 +273,16 @@
         where id = #{id}
     </delete>
 
+    <select id="queryAll" resultType="com.ss.mryy.entity.Orders">
+        SELECT id, openid, proname, makedate, username, orderstate
+        , placedate, usertell, information, busid, proid,tecid
+        FROM orders
+        <where>
+            <if test="orderstate != null and orderstate != ''">
+                orderstate = #{orderstate}
+            </if>
+        </where>
+    </select>
+
 </mapper>
 

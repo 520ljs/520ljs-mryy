@@ -137,4 +137,19 @@ public class OrdersServiceImpl implements OrdersService {
             return new ResponseData(ResponseCode.FAIL);
         }
     }
+
+    @Override
+    public List<Orders> getOrdersByOrderState(String orderstate) {
+
+        try{
+            Orders order = new Orders();
+            order.setOrderstate(orderstate);
+            List<Orders> orders = ordersDao.queryAll(order);
+            return orders;
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
+        return null;
+    }
 }
