@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c80113-a564-49e7-9bcd-ef926e38cb75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/util/SMSUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/config/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/scheduling/SendScheduling.java" beforeDir="false" afterPath="$PROJECT_DIR$/mryy/src/main/java/com/ss/mryy/scheduling/SendScheduling.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +125,7 @@
       <workItem from="1682385022090" duration="12381000" />
       <workItem from="1682470935551" duration="28104000" />
       <workItem from="1682558244196" duration="18025000" />
-      <workItem from="1682643951195" duration="7386000" />
+      <workItem from="1682643951195" duration="8416000" />
     </task>
     <servers />
   </component>
