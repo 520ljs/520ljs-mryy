@@ -2,6 +2,7 @@ package com.ss.mryy.scheduling;
 
 import com.ss.mryy.entity.Orders;
 import com.ss.mryy.service.OrdersService;
+import com.ss.mryy.util.SMSUtil;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -30,14 +31,13 @@ public class SendScheduling {
             System.out.println(order.getUsertell());
             String usertell = order.getUsertell();
             //3.发送短信
-            //boolean flag = SMSUtil.sendSMS(usertell);
+            boolean flag = SMSUtil.sendSMS(usertell);
 
-            /*if (flag) {
+            if (flag) {
                 //4.如果发送成功，修改当前订单的状态为1
                 order.setOrderstate("1");
                 orderService.update(order);
-            }*/
-
+            }
         }
     }
 
