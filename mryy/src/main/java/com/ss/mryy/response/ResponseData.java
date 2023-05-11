@@ -39,15 +39,15 @@ public class ResponseData {
         this.msg = responseCode.getMsg();
     }
 
-    public ResponseData(String code, String massage, Object data) {
+    public ResponseData(String code, String msg, Object data) {
         this.code = code;
-        this.msg = massage;
+        this.msg = msg;
         this.data = data;
     }
 
-    public ResponseData(String code, String massage) {
+    public ResponseData(String code, String msg) {
         this.code = code;
-        this.msg = massage;
+        this.msg = msg;
     }
 
     public Long getCount() {

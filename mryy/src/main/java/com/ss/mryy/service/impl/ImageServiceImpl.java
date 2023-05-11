@@ -93,6 +93,7 @@ public class ImageServiceImpl implements ImageService {
             return new ResponseData(ResponseCode.SUCCESS, images);
         } catch (Exception e) {
             // 失败
+            System.out.println(e);
             return new ResponseData(ResponseCode.FAIL_DAO);
         }
     }
