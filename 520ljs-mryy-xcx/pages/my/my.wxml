@@ -1,0 +1,33 @@
+<view class="top">
+    <view class="userInfo">
+        <view class="nickName">{{userInfo.nickName}}</view>
+        <view class="fontColor" style="font-size:26rpx;margin-top:10rpx" hidden="{{isHidden}}">
+            未登录
+            <text class="register" bindtap="toRegister">注册账号</text>
+            <text class="login" bindtap="toLogin">登录账号</text>
+        </view>
+    </view>
+    <image src="{{userInfo.avatarUrl}}"></image>
+</view>
+
+<!-- 第二部分 订单状态 nav -->
+<view class="nav">
+    <!-- 现状：所有的view都有下边框  效果：点击某一个view时，给当前这个view加上下边框 
+    navTab时：就会有效果，点击某一个view时，给点击这个view加上一个class  
+    currentIndex:0-3
+  -->
+    <view class="{{currentIndex==index?'navTab':''}}" bindtap="getOrderData" data-inx="{{index}}" wx:for="{{navTabData}}" wx:key="index">{{item}}</view>
+</view>
+
+<!-- 第三部分 展示订单 -->
+<view class="order">
+    <view class="orderItem" wx:for="{{orderData}}">
+        <image src="{{imageHttpUrl+item.project.image.imageurl}}"></image>
+        <view class="orderInfo">
+            <view class="proname">{{item.proname}}</view>
+            <view>{{item.business.busname}}</view>
+            <view>价格：{{item.project.proprice}}元</view>
+            <view>{{item.business.servertime}}</view>
+        </view>
+    </view>
+</view>

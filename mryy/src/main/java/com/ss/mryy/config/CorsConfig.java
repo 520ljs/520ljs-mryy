@@ -1,21 +1,35 @@
 package com.ss.mryy.config;
 
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 
 /**
  * @Author:ljy.s
  * @Date:2023/4/28 - 04 - 28 - 15:19
  */
-//@Configuration
-public class CorsConfig implements WebMvcConfigurer {
-//    public static final String[] ORIGINS = {"GET", "POST", "PUT", "DELETE", "PATCH"};
-//
-//    @Override
-//    public void addCorsMappings(CorsRegistry registry) {
-//        registry.addMapping("/**")
-//                .allowedHeaders(CorsConfiguration.ALL)
-//                .allowedMethods(ORIGINS)
-//                .allowCredentials(true)
-//                .maxAge(3600);
-//    }
+@Configuration
+public class CorsConfig {
+    private CorsConfiguration buildConfig() {
+        CorsConfiguration corsConfiguration = new CorsConfiguration();
+        // 设置属性
+        // 允许跨域请求的地址，*表示所有
+        corsConfiguration.addAllowedOrigin("*");
+        //  跨域的请求头
+        corsConfiguration.addAllowedHeader("*");
+        //  跨域的请求方法
+        corsConfiguration.addAllowedMethod("*");
+        // 在跨域请求的时候使用同一个 Session
+        corsConfiguration.setAllowCredentials(true);
+        return corsConfiguration;
+    }
+    @Bean
+    public CorsFilter corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        //配置 可以访问的地址
+        source.registerCorsConfiguration("/**", buildConfig());
+        return new CorsFilter(source);
+    }
 }

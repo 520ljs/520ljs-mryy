@@ -1,0 +1,73 @@
+.top image {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+}
+
+.top {
+    border-top: 1px solid #999;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    padding-top: 40rpx;
+    align-items: center;
+}
+
+.nickName {
+    font-weight: bold;
+    font-size: 40rpx;
+}
+
+.fontColor {
+    color: #999;
+}
+
+.register,
+.login {
+    color: blue;
+    margin-left: 20rpx;
+}
+
+/* 第二部分 */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    margin-top: 40rpx;
+}
+
+.navTab {
+    border-bottom: 1px solid #999;
+    padding-bottom: 10rpx;
+}
+
+/* 第三部分 */
+.orderItem {
+    display: flex;
+    align-items: center;
+    margin-top: 20rpx;
+}
+
+.orderItem image {
+    height: 200rpx;
+    width: 50%;
+}
+
+.orderInfo {
+    margin-left: 20rpx;
+}
+
+.order {
+    padding: 0 20rpx;
+    margin-top: 40rpx;
+}
+
+.proname {
+    font-size: 34rpx;
+    font-weight: bold;
+    width: 300rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+

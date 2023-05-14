@@ -1,0 +1,105 @@
+/* 第一部分 */
+page {
+    height: 100%;
+}
+
+swiper {
+    height: 26%;
+}
+
+swiper image {
+    width: 100%;
+    /* 需要设置高度，image跟外面的swiper保持一致 */
+    height: 100%;
+}
+
+/* 第二部分 */
+.navItem image {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.nav {
+    /* 浮动 */
+    display: flex;
+    /* 靠两边分布 */
+    justify-content: space-between;
+    /* 想用上面这个，所以设置上下左右，只设置上下 */
+    padding: 0 20rpx;
+    /* 离顶部距离 */
+    margin-top: 40rpx;
+}
+
+.navItem {
+    display: flex;
+    /* 垂直分布 */
+    flex-direction: column;
+    /* 居中 */
+    align-items: center;
+}
+
+/* 第三部分 */
+.proItem {/* 整体 */
+    display: flex;/* 浮动 */
+    padding: 0 20rpx;/* 内边距 */
+    margin-top: 20rpx;/* 上外边距 */
+}
+
+.pros {/* 盒子 */
+    margin-top: 40rpx;/* 上外边距 */
+}
+
+.proItem image {/* 图片 */
+    height: 160rpx;
+}
+
+.proexplain {/* 具体详细信息 */
+    /* 前四个：超出宽度隐藏 */
+    width: 300rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #999;/* 颜色 */
+    font-size: 26rpx;/* 字体大小 会根据机型变化适应 */
+    margin-top: 20rpx;/* 上外边距 */
+}
+
+.proInfo {/* 三行字 */
+    margin-left: 20rpx;/* 左外边距 */
+    display: flex;/* 浮动 */
+    justify-content: space-between;/*  */
+}
+
+.proname {/* 第一行字 */
+    font-size: 34rpx;
+    font-weight: bold;/* 字体大小 */
+    width: 200rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.proprice {
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #d24a58;
+    margin-top: 30rpx;
+}
+
+.proBtn {
+    background-color: #d24a58;
+    border-radius: 50%;
+    width: 100rpx;
+    height: 100rpx;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 34rpx;
+}
+
+.isData {
+    text-align: center;
+    color: #999;
+    padding: 40rpx 0;
+}

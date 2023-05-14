@@ -1,0 +1,10 @@
+<scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="lower">
+    <view class="tec">
+        <!-- 每一个对象 -->
+        <view class="tecInfo" wx:for="{{tecData}}" bindtap="toTecDetails" data-id="{{item.id}}">
+            <view style="font-weight:bold">{{item.techname}}</view>
+            <view class="techexplain">{{item.techexplain}}</view>
+            <image src="{{httpImageUrl+item.imageurl}}"></image>
+        </view>
+    </view>
+</scroll-view>

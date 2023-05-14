@@ -1,0 +1,43 @@
+<scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="lower">
+
+    <!-- 第一部分 轮播图 bannerData -->
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" circular="true">
+        <block wx:for="{{bannerData}}" wx:key="*this">
+            <swiper-item>
+                <image src="{{httpImageUrl+item.imageurl}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <!-- 第二部分 导航菜单 navData -->
+    <view class="nav">
+        <view class="navItem" wx:for="{{navData}}" wx:key="*this">
+            <image src="{{httpImageUrl+item.imageurl}}" mode="" />
+            <view>{{item.imagetitle}}</view>
+        </view>
+    </view>
+
+    <!-- 第三部分 产品部分 proData -->
+    <view class="pros">
+        <view class="proItem" data-id="{{item.id}}" wx:for="{{proData}}" wx:key="*this" bindtap="toProDetails">
+            <image class="image" src="{{httpImageUrl+item.image.imageurl}}" />
+            <view class="proInfo">
+                <view>
+                    <view class="proname">{{item.proname}}</view>
+                    <view class="proprice">{{item.proprice}}</view>
+                    <view class="proexplain">{{item.proexplain}}</view>
+                </view>
+                <view>
+                    <view class="proBtn" bindtap="toOrder" data-id="{{item.id}}">预约</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="isData">
+            <view wx:if="{{isData}}">正在加载数据。。。。</view>
+            <view wx:else>我也是有底线的。。。。</view>
+        </view>
+
+    </view>
+
+</scroll-view>
