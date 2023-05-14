@@ -81,13 +81,6 @@ public interface TechnicianDao {
     int deleteById(Long id);
 
     /**
-     * 统计总条数
-     *
-     * @return
-     */
-    Long queryCount();
-
-    /**
      * 查询指定行数据
      *
      * @param page  页
@@ -95,6 +88,13 @@ public interface TechnicianDao {
      * @return 对象列表
      */
     List<Technician> getTecInfosByLimit(@Param("page") int page, @Param("limit") int limit);
+
+    /**
+     * 统计总条数
+     *
+     * @return
+     */
+    Long queryCount();
 
     /**
      * 根据id获取技师信息  以及  项目信息
